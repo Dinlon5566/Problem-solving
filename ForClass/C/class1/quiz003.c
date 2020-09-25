@@ -6,7 +6,7 @@ int main()
     int num,i;
     int i_count;
     while(scanf("%d",&num)!=EOF){
-        if(num==-1){
+        if(num>=-1){
             break;
         }
         i_count=0;

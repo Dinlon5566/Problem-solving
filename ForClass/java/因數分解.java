@@ -8,7 +8,7 @@ public class Main {
             if(in%tim==0){
                 System.out.print(tim);
                 in/=tim;
-                if(tim!=1){
+                if(in!=1){
                 System.out.print(" ");
             }
             }else{

@@ -1,38 +1,26 @@
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        if(needle == "")
+
+        int haystackLen=haystack.size();
+        int needleLen=needle.size();
+
+        if(needleLen==0){
             return 0;
-        if(needle == haystack)
-            return 0;
-        if(needle.size() > haystack.size())
-            return -1;
-        int t;
-        // buscando el primer caracter coincidente
-        for(int i = 0, j = 0; i < haystack.size(); i++) {
-            // encontrado
-            if(haystack[i] == needle[j]) {
-                t = i;
-                while(j < needle.size()) {
-                    if(i > haystack.size())
-                        return -1;
-                    if(haystack[i] != needle[j]) {
-                        // si la longitud en la cadena a buscar es menor a needle.size()
-                        // no se encontrará needle
-                        if(haystack.size() - t < needle.size())
-                            return -1;
-                        j = 0;
-                        i = t;
+        }
+
+        for(int i=0;i<=haystackLen-needleLen;i++){
+            if(haystack[i]==needle[0]){
+                for(int j=1;j<=needleLen;j++){
+                    if(j==needleLen){
+                        return i;
+                    }else if(haystack[i+j]!=needle[j]){
                         break;
                     }
-                    j++;
-                    i++;
                 }
-                if(j != 0)
-                    return t;
             }
         }
-        
+
         return -1;
     }
 };

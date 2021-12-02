@@ -35,20 +35,18 @@ int main()
             }
         }
 
-        if(!winner){
+        if(!winner)
+        {
             if(game[0][0]==game[1][1]&&game[2][2]==game[1][1])
-                {
-                    winner=game[0][0];
-                    break;
-                }
-        }
-        if(!winner){
+            {
+                winner=game[0][0];
+            }
             if(game[0][2]==game[1][1]&&game[2][0]==game[1][1])
-                {
-                    winner=game[0][2];
-                    break;
-                }
+            {
+                winner=game[0][2];
+            }
         }
+
 
         printf("%d\n",winner);
     }

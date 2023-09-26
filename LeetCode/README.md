@@ -4,6 +4,3 @@
 
 有些早期的code沒有clean code請見諒，issues我會收到並改進
 對於有題目問題歡迎來討論OwO/
-
-	by FJU CSIE-dinlon5566-
-	LINE:ton200168

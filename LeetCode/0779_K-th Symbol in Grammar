@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int kthGrammar(int n, int k) {
+        k--;
+        int tmp=1,t=0;
+        while(tmp*2<=k){
+            tmp*=2;
+        }
+        while(k>1){
+            if(k-tmp>=0){
+                k-=tmp;t++;
+            }
+            tmp/=2;
+        }
+
+        int result;
+        result=k==0?0:1;
+        result=t&1?!result:result;
+      
+        return result;
+    }
+};
